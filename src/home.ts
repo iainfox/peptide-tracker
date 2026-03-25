@@ -1,3 +1,5 @@
+import "./scripts/select_peptide_from_list.ts"
+
 const title = document.getElementById("date-title")
 
 function getDaySuffix(date: Date) {
@@ -40,17 +42,4 @@ document.querySelectorAll('input[type="checkbox"]').forEach(element => {
         parent.classList.add('light')
         radio.setAttribute("disabled", '')
     })
-})
-
-document.querySelectorAll('input[type="radio"]').forEach(element => {
-    const radio = element as HTMLInputElement;
-    radio.addEventListener('change', (_) => {
-        const group = document.querySelectorAll(`input[name="${radio.name}"]`)
-
-        group.forEach(r => {
-            r.closest('li')?.classList.remove('selected')
-        })
-
-        radio.closest('li')?.classList.add('selected')
-    });
 })
