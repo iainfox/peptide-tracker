@@ -21,6 +21,7 @@
 
     /* Accent: interactive emphasis, selection, current route hint. */
     --color-accent: #5eb3c7;
+    --color-accent-dark: #488696;
     --color-accent-soft: rgb(94 179 199 / 22%);
     --color-accent-softer: rgb(94 179 199 / 12%);
     /* Rim for “current route” / focus-like emphasis */
