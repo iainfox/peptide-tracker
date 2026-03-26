@@ -56,6 +56,14 @@
     border-radius: 8px;
 }
 
+.list-data button:active {
+    background-color: var(--color-accent-softer);
+}
+
+.list-data button:active svg {
+    stroke: var(--color-accent-dark);
+}
+
 .list-data button svg {
     max-width: 80%;
     max-height: 80%;
