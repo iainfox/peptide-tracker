@@ -69,3 +69,245 @@
     max-height: 80%;
     stroke: var(--color-accent);
 }
+
+#add-menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+
+    box-sizing: border-box;
+    position: fixed;
+    transition: all .3s cubic-bezier(.10,0,0.10,1);
+
+    top: 100%;
+    width: 100%;
+    height: 90%;
+    padding: 15px;
+
+    border-radius: 20px 20px 0 0;
+    background-color: var(--color-bg-inset);
+    border: 3px solid var(--color-accent-edge);
+
+    overflow-y: auto;
+}
+
+#add-menu.visible {
+    top: 10%;
+}
+
+#add-menu.is-dragging {
+    transition: none;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-bg-surface);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.input-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.input-title svg {
+    width: 35px;
+    height: 35px;
+    stroke: none;
+    fill: var(--color-accent);
+}
+
+.input-title svg.stroke {
+    stroke: var(--color-accent);
+}
+
+.input-title h2 {
+    margin: 0;
+    font-size: 1.05em;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.input-area + .input-area {
+    margin-top: 5px;
+}
+
+.input-area input {
+    flex: 1;
+}
+
+.input-area label,
+.input-area h3 {
+    flex: 1;
+    align-self: center;
+
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+}
+
+#add-menu input,
+#add-menu select {
+    box-sizing: border-box;
+    background-color: var(--color-accent-softer);
+    border: 1px solid var(--color-accent-edge);
+    color: var(--color-fg-default);
+    padding: 0.5rem 0.65rem;
+    font: inherit;
+    border-radius: 15px;
+}
+
+#add-menu option {
+    color: var(--color-fg-muted);
+    background-color: var(--color-bg-inset);
+}
+
+#add-menu input::placeholder {
+    color: var(--color-fg-muted);
+}
+
+#add-menu input:focus::placeholder {
+    color: transparent;
+}
+
+#add-menu p {
+    box-sizing: border-box;
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 15px;
+
+    background-color: var(--color-bg-inset);
+    color: var(--color-fg-muted);
+
+    margin: 0;
+    flex: 1;
+
+    font: inherit;
+}
+
+#add-menu input:focus,
+#add-menu select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+#add-menu .input-area .number {
+    max-width: 5.25rem;
+    padding: 0.3rem 0.45rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+#add-menu .unit-static {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.3rem 0.45rem;
+    text-decoration: none;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-bg-inset);
+    color: var(--color-fg-muted);
+    border-radius: 15px;
+    user-select: none;
+}
+
+#add-menu select.unit {
+    max-width: 5.25rem;
+    text-align-last: center;
+}
+
+.drag-rule {
+    background-color: var(--color-fg-muted);
+    border: 5px solid transparent;
+    border-radius: 4px;
+    margin: 1px auto;
+    touch-action: none;
+    user-select: none;
+}
+
+.date-section {
+    display: none;
+    margin-top: 5px;
+}
+
+.date-section.visible {
+    display: flex;
+    align-self: center;
+    
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.time-selecter {
+    margin: 0;
+    padding: .5rem;
+    list-style-type: none;
+    background-color: var(--color-accent-softer);
+    border: 1px solid var(--color-accent-edge);
+    border-radius: 15px;
+}
+
+.time-selecter li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    
+    color: var(--color-fg-default);
+    font: inherit;
+    
+}
+
+.time-selecter li + li {
+    margin-top: 3px;
+}
+
+.time-selecter .time-row {
+    gap: 0.5rem;
+}
+
+.time-selecter .button-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.time-selecter .button-group button {
+    box-sizing: border-box;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-accent-edge);
+    border-radius: 8px;
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent);
+}
+
+.time-selecter .button-group button:active {
+    background-color: var(--color-accent-softer);
+    color: var(--color-accent-dark);
+}
+
+.input-area.full {
+    display: block;
+    width: 100%;
+}
