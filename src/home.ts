@@ -15,7 +15,7 @@ function getDaySuffix(date: Date) {
 if (title) {
     const today = new Date()
 
-    const day = String(today.getDate())
+    const day = String(today.getDate()).padStart(2, '0')
     const day_name = getDaySuffix(today)
     const month = String(today.getMonth() + 1).padStart(2, '0')
     const month_name = today.toLocaleString('default', { month: 'long' })
