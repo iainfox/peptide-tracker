@@ -1,0 +1,23 @@
+:root {
+    --color-bg-app: #12161b;
+    --color-bg-surface: #1a2027;
+    --color-bg-inset: #222a33;
+    --color-bg-inset-dimmed: rgb(34 42 51 / 52%);
+
+    --color-fg-default: #eceff3;
+    --color-fg-muted: rgb(236 239 243 / 48%);
+
+    --color-border-subtle: rgb(255 255 255 / 6%);
+    --color-border-default: rgb(255 255 255 / 10%);
+    --color-divider: rgb(255 255 255 / 7%);
+
+    --color-accent: #5eb3c7;
+    --color-accent-dark: #488696;
+    --color-accent-soft: rgb(94 179 199 / 22%);
+    --color-accent-softer: rgb(94 179 199 / 12%);
+    --color-accent-edge: rgb(94 179 199 / 35%);
+
+    --color-nav-tile: rgb(0 0 0 / 28%);
+    --color-nav-tile-pressed: var(--color-accent-softer);
+    --color-nav-tile-current: var(--color-accent-soft);
+}
