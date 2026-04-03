@@ -1,0 +1,69 @@
+@import url("../main.css");
+
+nav {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border-default);
+    box-shadow: 0 1px 0 var(--color-border-subtle);
+    width: 95%;
+    border-radius: 25px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--color-nav-tile);
+    border: 1px solid var(--color-border-subtle);
+
+    border-radius: 15px;
+    transition: background-color 80ms ease, border-color 80ms ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    aspect-ratio: 1/1;
+    -webkit-user-drag: none;
+}
+
+li svg {
+    stroke: var(--color-fg-muted);
+    width: 75%;
+    fill: none;
+    stroke-width: 2;
+}
+
+li a {
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:active {
+    stroke: var(--color-fg-default);
+    background-color: var(--color-nav-tile-pressed);
+    border-color: var(--color-border-default);
+}
+
+a.active {
+    background-color: var(--color-nav-tile-current);
+    border-color: var(--color-accent-edge);
+    border-radius: 15px;
+}
+
+a.active svg {
+    stroke: var(--color-accent);
+}
