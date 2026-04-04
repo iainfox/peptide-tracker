@@ -1,6 +1,6 @@
 @import url("../../main.css");
 
-nav {
+.nav-bar {
     background-color: var(--color-bg-surface);
     border: 1px solid var(--color-border-default);
     box-shadow: 0 1px 0 var(--color-border-subtle);
@@ -8,14 +8,14 @@ nav {
     border-radius: 25px;
 }
 
-ul {
+.nav-list {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.nav-element {
     background-color: var(--color-nav-tile);
     border: 1px solid var(--color-border-subtle);
 
@@ -31,14 +31,14 @@ li {
     -webkit-user-drag: none;
 }
 
-li svg {
+.nav-element svg {
     stroke: var(--color-fg-muted);
     width: 75%;
     fill: none;
     stroke-width: 2;
 }
 
-li a {
+.nav-element a {
     border: none;
     background: none;
     text-decoration: none;
@@ -52,18 +52,18 @@ li a {
     align-items: center;
 }
 
-li:active {
+.nav-element:active {
     stroke: var(--color-fg-default);
     background-color: var(--color-nav-tile-pressed);
     border-color: var(--color-border-default);
 }
 
-a.active {
+.nav-element a.active {
     background-color: var(--color-nav-tile-current);
     border-color: var(--color-accent-edge);
     border-radius: 15px;
 }
 
-a.active svg {
+.nav-element a.active svg {
     stroke: var(--color-accent);
 }
