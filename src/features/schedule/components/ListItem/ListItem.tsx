@@ -12,7 +12,6 @@ type Props = {
 
 export function ListItem({
     item,
-    id,
     isSelected,
     isChecked,
     onSelect,
@@ -29,14 +28,13 @@ export function ListItem({
                 ].filter(Boolean).join(" ")
             }
         >
-            <label htmlFor={String(id)}>{item.name}</label>
+            <span className="label">{item.name}</span>
 
             <input
                 type="checkbox"
                 checked={isChecked}
                 onChange={onToggle}
                 onClick={(e) => e.stopPropagation()}
-                id={String(id)}
             />
         </li>
     );
