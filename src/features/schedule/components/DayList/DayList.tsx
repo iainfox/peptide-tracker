@@ -35,9 +35,8 @@ export function DayList({
 
             <ul className="day-group">
                 {sections.map((section) => (
-                    <li>
+                    <li key={section.time}>
                         <TimeSection
-                            key={section.time}
                             section={section}
                             selectedItemId={selectedItemId}
                             onSelectItem={onSelectItem}
