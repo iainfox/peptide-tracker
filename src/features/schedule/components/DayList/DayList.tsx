@@ -1,5 +1,5 @@
-import { Section } from "../types.ts";
-import { TimeSection } from "./TimeSection.tsx";
+import { Section } from "../../types.ts";
+import { TimeSection } from "../TimeSection/TimeSection.tsx";
 
 type Props = {
     sections: Section[];

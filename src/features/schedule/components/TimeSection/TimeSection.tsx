@@ -1,5 +1,5 @@
-import { Section } from "../types.ts";
-import { ListItem } from "./ListItem.tsx";
+import { Section } from "../../types.ts";
+import { ListItem } from "../ListItem/ListItem.tsx";
 
 type Props = {
     section: Section;

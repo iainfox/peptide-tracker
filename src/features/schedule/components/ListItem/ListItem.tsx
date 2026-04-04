@@ -1,4 +1,4 @@
-import { Item } from "../types.ts";
+import { Item } from "../../types.ts";
 
 type Props = {
     item: Item;
@@ -18,22 +18,22 @@ export function ListItem({
     return (
         <div
             onClick={onSelect}
-            style={{
-                border: isSelected ? "2px solid blue" : "1px solid gray",
-                backgroundColor: isChecked ? "#ddd" : "#fff",
-                padding: "8px",
-                marginBottom: "4px",
-                cursor: "pointer",
-            }}
+            className={
+                [
+                    isSelected ? "list-item--selected" : "",
+                    isChecked ? "list-item--checked" : "",
+                    "list-item"
+                ].filter(Boolean).join(" ")
+            }
         >
+            {item.name}
+
             <input
                 type="checkbox"
                 checked={isChecked}
                 onChange={onToggle}
                 onClick={(e) => e.stopPropagation()}
             />
-
-            {item.name}
         </div>
     );
 }
