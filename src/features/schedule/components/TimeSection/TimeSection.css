@@ -1,0 +1,14 @@
+.list-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.list-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style-type: none;
+    padding: 0;
+    gap: 5px;
+}

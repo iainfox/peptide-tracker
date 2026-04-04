@@ -20,8 +20,8 @@ export function TimeSection({
     setCheckedItems,
 }: Props) {
     return (
-        <div>
-            <h3>{section.time}</h3>
+        <ul className="list-data">
+            <h3 className="list-title">{section.time}</h3>
 
             {section.items.map((item) => (
                 <ListItem
@@ -40,6 +40,6 @@ export function TimeSection({
                     }
                 />
             ))}
-        </div>
+        </ul>
     );
 }
