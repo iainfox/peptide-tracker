@@ -1,4 +1,5 @@
 import { Item } from "../../types.ts";
+import "./ListItem.css"
 
 type Props = {
     item: Item;

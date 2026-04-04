@@ -1,5 +1,6 @@
 import { Section } from "../../types.ts";
 import { TimeSection } from "../TimeSection/TimeSection.tsx";
+import "./DayList.css"
 
 type Props = {
     sections: Section[];
