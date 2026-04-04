@@ -26,6 +26,7 @@ export function TimeSection({
                 <ListItem
                     key={item.id}
                     item={item}
+                    id={item.id}
                     isSelected={selectedItemId === item.id}
                     isChecked={checkedItems.has(item.id)}
                     onSelect={() => onSelectItem(item.id)}
