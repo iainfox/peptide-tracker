@@ -5,6 +5,7 @@ import "./Home.css"
 
 function Home() {
     const [checkedItems, setCheckedItems] = useState<Set<number>>(new Set());
+    const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
 
     const data = [
         {
@@ -25,8 +26,8 @@ function Home() {
     return <div className="page">
         <DayList
             sections={data}
-            selectedItemId={null}
-            onSelectItem={() => {}}
+            selectedItemId={selectedItemId}
+            onSelectItem={setSelectedItemId}
             checkedItems={checkedItems}
             setCheckedItems={setCheckedItems}
         />
