@@ -1,0 +1,57 @@
+@import url("../../../../main.css");
+
+.peptide-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-bg-inset);
+
+    border-radius: 8px;
+    padding: 3px;
+    width: 100%;
+}
+
+.peptide-list-item .button-group {
+    display: flex;
+    flex-direction: row;
+
+    gap: 3px;
+}
+
+.peptide-list-item .button-group button {
+    border: none;
+    padding: 0;
+    aspect-ratio: 1/1;
+    width: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-accent-soft);
+    border-radius: 5px;
+}
+
+.peptide-list-item .button-group button:active {
+    background-color: var(--color-accent-softer);
+}
+
+.peptide-list-item .button-group button svg {
+    max-width: 80%;
+    max-height: 80%;
+    stroke: var(--color-accent);
+    stroke-width: 12;
+    fill: none;
+}
+
+.peptide-list-item .button-group button:active svg {
+    stroke: var(--color-accent-dark);
+}
+
+.peptide-list-item .label {
+    display: flex;
+    flex-grow: 1;
+    font-size: 1.2em;
+}
