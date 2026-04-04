@@ -2,6 +2,7 @@ import { Item } from "../../types.ts";
 
 type Props = {
     item: Item;
+    id: number;
     isSelected: boolean;
     isChecked: boolean;
     onSelect: () => void;
@@ -10,6 +11,7 @@ type Props = {
 
 export function ListItem({
     item,
+    id,
     isSelected,
     isChecked,
     onSelect,
@@ -26,13 +28,14 @@ export function ListItem({
                 ].filter(Boolean).join(" ")
             }
         >
-            {item.name}
+            <label htmlFor={String(id)}>{item.name}</label>
 
             <input
                 type="checkbox"
                 checked={isChecked}
                 onChange={onToggle}
                 onClick={(e) => e.stopPropagation()}
+                id={String(id)}
             />
         </div>
     );
