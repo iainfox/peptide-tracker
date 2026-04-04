@@ -1,0 +1,27 @@
+@import url("../../../../main.css");
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    transition: all .3s linear;
+
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: var(--color-bg-inset);
+    width: 95%;
+    border: 2px solid var(--color-border-list-idle);
+}
+
+.list-item.label {
+    display: flex;
+    flex-grow: 1;
+}
+
+.list-item.checked {
+    background-color: var(--color-bg-inset-dimmed) !important;
+}
+
+.list-item.selected {
+    border: 2px solid var(--color-accent) !important;
+    box-shadow: 0 0 0 1px var(--color-accent-soft);
+}

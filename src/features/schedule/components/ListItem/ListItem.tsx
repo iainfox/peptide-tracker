@@ -19,12 +19,12 @@ export function ListItem({
     onToggle,
 }: Props) {
     return (
-        <div
+        <li
             onClick={onSelect}
             className={
                 [
-                    isSelected ? "list-item--selected" : "",
-                    isChecked ? "list-item--checked" : "",
+                    isSelected ? "selected" : "",
+                    isChecked ? "checked" : "",
                     "list-item"
                 ].filter(Boolean).join(" ")
             }
@@ -38,6 +38,6 @@ export function ListItem({
                 onClick={(e) => e.stopPropagation()}
                 id={String(id)}
             />
-        </div>
+        </li>
     );
 }
