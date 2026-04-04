@@ -3,7 +3,6 @@ import "./ListItem.css"
 
 type Props = {
     item: Item;
-    id: number;
     isSelected: boolean;
     isChecked: boolean;
     onSelect: () => void;
