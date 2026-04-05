@@ -1,6 +1,7 @@
-import { useRef, useEffect, SetStateAction, Dispatch } from "react";
+import { useRef, useEffect, SetStateAction, Dispatch, ChangeEvent } from "react";
 import "./AddForm.css";
 import InputArea from "../InputArea/InputArea";
+import Input from "../Input/Input";
 
 type Props = {
     isVisible: boolean;
@@ -54,6 +55,10 @@ function AddForm({ isVisible, hideAddForm }: Props) {
         };
     }, []);
 
+    function temp(_: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
+
+    }
+
     return (
         <div ref={formRef} className={`add-form ${isVisible ? "visible" : ""}`}>
             <hr
@@ -69,7 +74,14 @@ function AddForm({ isVisible, hideAddForm }: Props) {
                     </svg>
                 )}
                 title={"Peptide Name"}
-            />
+            >
+                <Input
+                    onChange={temp}
+                    id="peptide-name"
+                    placeholder={"Enter a name"}
+                    type="text"
+                />
+            </InputArea>
 
             <InputArea
                 icon={(
@@ -83,7 +95,25 @@ function AddForm({ isVisible, hideAddForm }: Props) {
                     </svg>
                 )}
                 title={"Vial Info"}
-            />
+            >
+                <Input 
+                    onChange={temp}
+                    id="dilutent-amount"
+                    title="Dilutent"
+                    placeholder={2}
+                    units={["ml"]}
+                    type="number"
+                />
+                
+                <Input 
+                    onChange={temp}
+                    id="peptide-amount"
+                    title="Peptide"
+                    placeholder={5}
+                    units={["mg", "mcg"]}
+                    type="number"
+                />
+            </InputArea>
 
             <InputArea
                 icon={(
@@ -98,7 +128,21 @@ function AddForm({ isVisible, hideAddForm }: Props) {
                     </svg>
                 )}
                 title={"Dosage Info"}
-            />
+            >
+                
+                <Input 
+                    onChange={temp}
+                    id="syringe-type"
+                    title="Syringe Type"
+                    type="dropdown"
+                    options={[
+                        "U-100",
+                        "U-50",
+                        "U-30"
+                    ]}
+                />
+
+            </InputArea>
 
             <InputArea
                 icon={(
@@ -107,7 +151,9 @@ function AddForm({ isVisible, hideAddForm }: Props) {
                     </svg>
                 )}
                 title={"Schedule"}
-            />
+            >
+
+            </InputArea>
         </div>
     );
 }
