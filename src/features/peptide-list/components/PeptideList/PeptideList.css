@@ -8,10 +8,11 @@
 
     background-color: var(--color-bg-surface);
     border-radius: 5px;
+    border: 2px solid var(--color-bg-inset);
 
     overflow-y: auto;
-    min-height: 15%;
-    max-height: 30%;
+    min-height: 25%;
+    max-height: 45%;
     width: 75%;
 
     list-style-type: none;
