@@ -3,6 +3,9 @@
 .input-area {
     box-sizing: border-box;
 
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--color-bg-surface);
     width: 100%;
 
@@ -31,4 +34,9 @@
 .input-area-title h2 {
     margin: 0;
     font-size: 1.05em;
+}
+
+.input-area-content {
+    display: flex;
+    flex-direction: column;
 }
