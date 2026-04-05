@@ -1,0 +1,100 @@
+@import url("../../../../main.css");
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.input-section + .input-section {
+    margin-top: 5px;
+}
+
+.input-area .label {
+    flex: 1;
+    align-self: center;
+
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    flex: 1;
+    justify-content: end;
+}
+
+.input {
+    flex: 1;
+    box-sizing: border-box;
+    background-color: var(--color-accent-softer);
+    border: 1px solid var(--color-accent-edge);
+    color: var(--color-fg-default);
+    padding: 5px 8px;
+    font: inherit;
+    border-radius: 15px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+.input::placeholder {
+    color: var(--color-fg-muted);
+}
+
+.input:focus::placeholder {
+    color: transparent;
+}
+
+.input.number {
+    max-width: 5.25rem;
+    padding: 0.3rem 0.45rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.option {
+    color: var(--color-fg-muted);
+    background-color: var(--color-bg-inset);
+}
+
+.static-input {
+    box-sizing: border-box;
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 15px;
+
+    background-color: var(--color-bg-inset);
+    color: var(--color-fg-muted);
+
+    margin: 0;
+    flex: 1;
+
+    font: inherit;
+}
+
+.dropdown.unit {
+    max-width: 5.25rem;
+    text-align-last: center;
+}
+
+.static-unit {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.3rem 0.45rem;
+    text-decoration: none;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-bg-inset);
+    color: var(--color-fg-muted);
+    border-radius: 15px;
+    user-select: none;
+}
