@@ -2,8 +2,10 @@ import { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import PeptideList from "../features/peptide-list/components/PeptideList/PeptideList";
 import { Item } from "../features/schedule/types";
+import AddForm from "../features/add-form/components/AddForm/AddForm";
 
 function Edit() {
+    const [isVisible, setIsVisible] = useState(false);
     const [peptides, setPeptides] = useState<Item[]>([
         {
             id: 1,
@@ -19,10 +21,6 @@ function Edit() {
         setPeptides((prev) => prev.filter((p) => p.id !== id));
     }
 
-    function showAddForm() {
-        console.log("Shows the empty add form.")
-    }
-
     function handleEdit() {
         console.log("This will open the add form with the details currently specified for that peptide filled in then replace it when the user submits it.");
     }
@@ -30,11 +28,15 @@ function Edit() {
     return <div className="page">
         <PeptideList
             peptides={peptides}
-            onAdd={showAddForm}
+            showAddForm={setIsVisible}
             onEdit={handleEdit}
             onDelete={handleDelete}
         />
         <Navbar />
+        <AddForm 
+            isVisible={isVisible}
+            hideAddForm={setIsVisible}
+        />
     </div>;
 }
 
